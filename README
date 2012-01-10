@@ -1,0 +1,18 @@
+Java Hash DOS测试.
+用于压力测试,检测网站是否存在HashDOS漏洞.
+原理:
+生成keyCount个hash值相同的参数POST到指定url,观察cpu是否被大量占用.
+
+使用方法:
+Post [method] [url] [keyCount] [valueLength]
+	method was: doHashDos|doHashDos2|doHashDos3
+	url: 被测试的网址
+	keyCount: 生成的相同hash值参数
+	valueLength: 每个参数对应的值长度(值随机)
+
+- doHashDos 使用URLConnection进行POST,获取返回值
+- doHashDos2 使用Socket模拟POST(application/x-www-form-urlencoded),不关心返回值
+- doHashDos3 使用Socket模拟POST(multipart/form-data),不关心返回值
+
+doHashDos3可能还不完善
+
