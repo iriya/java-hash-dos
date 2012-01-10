@@ -11,12 +11,12 @@ Post [method] [url] [keyCount] [valueLength]
 	valueLength: 每个参数对应的值长度(值随机)
 
 - doHashDos 使用URLConnection进行POST,获取返回值
-- doHashDos2 使用Socket模拟POST(application/x-www-form-urlencoded),不关心返回值
+- doHashDos2(推荐) 使用Socket模拟POST(application/x-www-form-urlencoded),不关心返回值
 - doHashDos3 使用Socket模拟POST(multipart/form-data),不关心返回值
 
 to fix:
 doHashDos3可能还不完善
 hash固定生成为12345678
-Socket模拟的UA固定为Java-Hash-DOs
+Socket模拟的UA固定为Java-Hash-Dos
 默认为8个线程以1s的频率向服务器发送请求
 
