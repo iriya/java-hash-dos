@@ -14,5 +14,8 @@ Post [method] [url] [keyCount] [valueLength]
 - doHashDos2 使用Socket模拟POST(application/x-www-form-urlencoded),不关心返回值
 - doHashDos3 使用Socket模拟POST(multipart/form-data),不关心返回值
 
+to fix:
 doHashDos3可能还不完善
+hash固定生成为12345678
+Socket模拟的UA固定为Java-Hash-DOs
 
